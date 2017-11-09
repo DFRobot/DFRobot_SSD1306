@@ -32,9 +32,9 @@ Input commands and draw different figures in the screen
 
 ## Feature
 
-Support different drawings in the screen, including point, line, circle, rectangle, triangle,rounded rectangle and some commands 
-Support English characters and character library chips of DFRobot modules
-IIC: the redraw rate is more than 30 frames per second when redrawed by ESP series controllers 
+Support different drawings in the screen, including point, line, circle, rectangle, triangle,rounded rectangle and some commands.<br>
+Support English characters and character library chips of DFRobot modules.<br>
+IIC: the redraw rate is more than 30 frames per second when redrawed by ESP series controllers<br>
 
 ## Installation
 
@@ -69,7 +69,7 @@ Value              |            result
 
 #include "DFRobot_SSD1306_I2C.h"
 
-Except special instructions, all axis as below are relative to the source node , draw point in the screen when color>0£¬clear point in the screen when color=0.
+Except special instructions, all axis as below are relative to the source node , draw point in the screen when color>0ï¼Œclear point in the screen when color=0.
 
 /*
  * @brief ssd1306 objective
@@ -344,7 +344,7 @@ int16_t getWidth(void);
 int16_t getHeight(void);
 
 /*
- * @brief ÏÔÊ¾Í¼Æ¬Êý×éShow image array
+ * @brief æ˜¾ç¤ºå›¾ç‰‡æ•°ç»„Show image array
  *
  * @param x       The x-axis of the starting point
  *        y       The y-axis of the starting point
@@ -377,11 +377,11 @@ DFRobot_Display    |  https://github.com/DFRobot/DFRobot_Display   | must
 
 MCU                | Work Well | Work Wrong | Untested  | Remarks
 ------------------ | :----------: | :----------: | :---------: | -----
-FireBeetle-ESP32  |      ¡Ì       |             |            | 
-FireBeetle-ESP8266  |      ¡Ì       |             |            | 
-FireBeetle-BLE4.1 |       ¡Ì      |             |            | 
-Arduino uno |       ¡Ì      |             |            | 
-Arduino leonardo |      ¡Ì       |             |            | 
+FireBeetle-ESP32  |      âˆš       |             |            | 
+FireBeetle-ESP8266  |      âˆš       |             |            | 
+FireBeetle-BLE4.1 |       âˆš      |             |            | 
+Arduino uno |       âˆš      |             |            | 
+Arduino leonardo |      âˆš       |             |            | 
 
 ## History
 
