@@ -1,0 +1,6 @@
+DFRobot_SSD1306_I2C	KEYWORD1
+
+displayON	KEYWORD2
+displayOFF	KEYWORD2
+displaySleepIN	KEYWORD2
+displaySleepOUT	KEYWORD2
