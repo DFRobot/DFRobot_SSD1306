@@ -38,7 +38,7 @@ IIC: the redraw rate is more than 30 frames per second when redrawed by ESP seri
 
 ## Installation
 
-Download the library ZIP file and unzip it to the Arduino folder of the library.
+Download the library ZIP file and unzip it to the Arduino folder of the library.<br>
 (If you haven't download DFRobot display library before,you need to download it first to drive (https://github.com/DFRobot/DFRobot_Display))
 
 
