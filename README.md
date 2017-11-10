@@ -344,7 +344,7 @@ int16_t getWidth(void);
 int16_t getHeight(void);
 
 /*
- * @brief 显示图片数组Show image array
+ * @brief Show image array
  *
  * @param x       The x-axis of the starting point
  *        y       The y-axis of the starting point
