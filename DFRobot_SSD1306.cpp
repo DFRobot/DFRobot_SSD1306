@@ -61,51 +61,51 @@ void DFRobot_SSD1306::fillScreen(uint16_t color)
 }
 
 
-void DFRobot_SSD1306::drawVLine(int16_t x, int16_t y, int16_t height, uint16_t color)
+void DFRobot_SSD1306::drawVLine(int16_t x, int16_t y, int16_t height_, uint16_t color)
 {
   uint8_t       i = 0;
   uint8_t       dataBuffer[8] = {0};
   uint8_t       lenth = 0;
   uint8_t       bufferCount = 0;
   uint16_t      bufferAddr = x + y / 8 * 128;
-  _DEBUG_PRINT("\n  drawFastVLine");
+  //_DEBUG_PRINT("\n  drawFastVLine");
   
-  if(limitVLine(x, y, height) < 0) {return;}
+  if(limitVLine(x, y, height_) < 0) {return;}
   writeCmd(SSD1306_COLUMNADDR);
   writeCmd(x);
   writeCmd(x);
   writeCmd(SSD1306_PAGEADDR);
   writeCmd(y / 8);
-  writeCmd((y + height) / 8);
+  writeCmd((y + height_) / 8);
 
   lenth = 8 - y % 8;
-  if(y % 8 + height > 8) {
+  if(y % 8 + height_ > 8) {
     for(i = 0; i < lenth; i ++) {
       writeBufferPixel(bufferAddr, y % 8 + i, color);
     }
-    height -= lenth;
+    height_ -= lenth;
   } else {
-    for(i = 0; i < height; i ++) {
+    for(i = 0; i < height_; i ++) {
       writeBufferPixel(bufferAddr, y % 8 + i, color);
     }
-    height = 0;
+    height_ = 0;
   }
   dataBuffer[0] = SSD1306_FrameBuffer[bufferAddr];
   
-  while(height > 0) {
+  while(height_ > 0) {
     bufferAddr += 128;
-    if(height > 7) {
+    if(height_ > 7) {
       if(color) {
         SSD1306_FrameBuffer[bufferAddr] = 0xff;
       } else {
         SSD1306_FrameBuffer[bufferAddr] = 0x00;
       }      
-      height -= 8;
+      height_ -= 8;
     } else {
-      for(i = 0; i < height; i ++) {
+      for(i = 0; i < height_; i ++) {
         writeBufferPixel(bufferAddr, i, color);
       }
-      height = 0;
+      height_ = 0;
     }
     bufferCount ++;
     dataBuffer[bufferCount] = SSD1306_FrameBuffer[bufferAddr];
