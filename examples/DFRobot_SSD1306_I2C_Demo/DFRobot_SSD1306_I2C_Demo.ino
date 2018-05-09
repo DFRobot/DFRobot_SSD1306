@@ -1,6 +1,8 @@
 #include "DFRobot_SSD1306_I2C.h"
 #include "DFRobot_Character.h"
 #include "DFRobot_GT30L.h"
+#include <Wire.h>
+#include <SPI.h>
 
 DFRobot_SSD1306_I2C OLED(0x3c);
 
@@ -43,5 +45,4 @@ void loop(void)
   OLED.fillScreen(0);OLED.fillRect(0, 0, 50, 25, 1);delay(500);
   OLED.fillScreen(0);OLED.fillTriangle(128 / 2, 0, 0, 63, 127, 63, 1);delay(500);
 }
-
 

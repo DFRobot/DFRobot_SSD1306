@@ -47,7 +47,7 @@ class DFRobot_SSD1306 : public DFRobot_Display
   public:
     DFRobot_SSD1306(void);
 
-    uint8_t       SSD1306_FrameBuffer[1024] = {0};
+    uint8_t       SSD1306_FrameBuffer[1024];
 
     virtual void        writeCmd(uint8_t cmd) = 0;
     virtual void        writeDatBytes(uint8_t* pDat, uint16_t count) = 0;

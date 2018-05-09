@@ -19,7 +19,6 @@ inline void DFRobot_SSD1306_I2C::drawPixel(int16_t x, int16_t y, uint16_t color)
   writeCmd(y / 8);
   writeBufferPixel(bufferAddr, y % 8, color);
   Wire.begin();
-  Wire.setClock(700000);
   Wire.beginTransmission(I2CAddr);
   Wire.write(0x40);
   Wire.write(SSD1306_FrameBuffer[bufferAddr]);

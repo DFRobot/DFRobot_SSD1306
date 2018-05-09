@@ -3,7 +3,7 @@
 
 #include "DFRobot_SSD1306.h"
 
-#define SSD1306_I2CBEGIN()        Wire.begin(); Wire.setClock(700000)
+#define SSD1306_I2CBEGIN()        Wire.begin()
 
 
 class DFRobot_SSD1306_I2C : public DFRobot_SSD1306
